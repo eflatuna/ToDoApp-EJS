@@ -45,6 +45,13 @@
 							<td><%= todo.priority %></td>
 							<td><%= !todo.isDone ? 'X': 'ok' %></td>
 							<td><%= todo.createdAt.toLocaleDateString() %></td>
+							<td>
+								<a
+									class="btn btn-sm btn-secondary me-2"
+									href="/view/<%= todo.id %>"
+									>Read</a
+								>
+							</td>
 						</tr>
 						<% } %>
 					</tbody>
