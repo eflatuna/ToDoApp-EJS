@@ -39,4 +39,12 @@ module.exports = {
 			res.redirect("/view");
 		}
 	},
+	delete: async (req, res) => {
+		const data = await Todo.destroy({ where: { id: req.params.todoId } });
+		if (data === 1) {
+			res.redirect("/view");
+		} else {
+			throw new Error("todo not found ");
+		}
+	},
 };
