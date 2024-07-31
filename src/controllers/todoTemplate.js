@@ -12,4 +12,11 @@ module.exports = {
 
 		res.render("todoList", { data });
 	},
+	create: async (req, res) => {
+		if (req.method === "GET") {
+			res.render("todoCreate");
+		} else {
+			const data = await Todo.create(req.body);
+		}
+	},
 };

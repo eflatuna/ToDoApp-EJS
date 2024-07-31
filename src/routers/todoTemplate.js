@@ -33,8 +33,8 @@ router.delete('/todos/:id', todo.delete)
 // // app.use(router)
 
 router.get("/", todoTemplate.list);
-// router.get("/create", todoTemplate.create); // Form Render
-// router.post("/create", todoTemplate.create); // Save
+router.get("/create", todoTemplate.create); // Form Render
+router.post("/create", todoTemplate.create); // Save
 
 // router.get("/:todoId", todoTemplate.read);
 
