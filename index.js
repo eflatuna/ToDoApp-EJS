@@ -20,8 +20,19 @@ app.set("view engine", "ejs");
 //! yeri onemli yukarıda kalsın
 app.use(express.json());
 
+app.all("/", (req, res) => {
+	// res.send("Welcome My App")
+	// const name = "Anthony"
+	// const title= "TodoApp"
+	// res.render("index",{name,title})
+
+	res.render("index", req.query);
+});
+
 // ROUTER
-app.use(require("./src/routers/todoRouter"));
+// app.use(require("./src/routers/todoRouter"));
+app.use("/api", require("./src/routers/todoRouter"));
+app.use("/view", require("./src/routers/todoTemplate"));
 
 // errorHAndler
 app.use(require("./src/middlewares/errorHandler"));
