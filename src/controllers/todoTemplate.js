@@ -3,14 +3,18 @@
     EXPRESSJS 
     ! TODO CONTROLLER
 */
-
+const priority = {
+	1: "High",
+	0: "Medium",
+	"-1": "Low",
+};
 const Todo = require("../models/todoModel");
 
 module.exports = {
 	list: async (req, res) => {
 		const data = await Todo.findAndCountAll();
 
-		res.render("todoList", { data });
+		res.render("todoList", { data, priority });
 	},
 	create: async (req, res) => {
 		if (req.method === "GET") {

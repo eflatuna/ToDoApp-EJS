@@ -42,7 +42,7 @@
 							<td><%= todo.id %></td>
 							<td><%= todo.title %></td>
 							<td><%= todo.description %></td>
-							<td><%= todo.priority %></td>
+							<td><%= priority[todo.priority] %></td>
 							<td><%= !todo.isDone ? 'X': 'ok' %></td>
 							<td><%= todo.createdAt.toLocaleDateString() %></td>
 							<td>
