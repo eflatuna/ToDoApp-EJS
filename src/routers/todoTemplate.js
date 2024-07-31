@@ -38,8 +38,8 @@ router.post("/create", todoTemplate.create); // Save
 
 router.get("/:todoId", todoTemplate.read);
 
-// router.get("/update/:todoId", todoTemplate.update);
-// router.post("/update/:todoId", todoTemplate.update);
+router.get("/update/:todoId", todoTemplate.update);
+router.post("/update/:todoId", todoTemplate.update);
 
 // router.get("/delete/:todoId", todoTemplate.delete);
 
