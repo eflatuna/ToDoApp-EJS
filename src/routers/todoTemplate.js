@@ -36,7 +36,7 @@ router.get("/", todoTemplate.list);
 router.get("/create", todoTemplate.create); // Form Render
 router.post("/create", todoTemplate.create); // Save
 
-// router.get("/:todoId", todoTemplate.read);
+router.get("/:todoId", todoTemplate.read);
 
 // router.get("/update/:todoId", todoTemplate.update);
 // router.post("/update/:todoId", todoTemplate.update);

@@ -26,6 +26,6 @@ module.exports = {
 	},
 	read: async (req, res) => {
 		const data = await Todo.findByPk(req.params.todoId);
-		res.render("todoRead", { data });
+		res.render("todoRead", { todo: data.dataValues });
 	},
 };
