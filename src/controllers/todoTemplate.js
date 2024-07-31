@@ -30,7 +30,7 @@ module.exports = {
 	},
 	read: async (req, res) => {
 		const data = await Todo.findByPk(req.params.todoId);
-		res.render("todoRead", { todo: data.dataValues });
+		res.render("todoRead", { todo: data.dataValues, priority });
 	},
 	update: async (req, res) => {
 		if (req.method == "GET") {
