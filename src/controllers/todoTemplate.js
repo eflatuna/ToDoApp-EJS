@@ -24,4 +24,8 @@ module.exports = {
 			res.redirect("/view"); //*yönlendirme icin kullanilan method. route adini yaziyoruz.
 		}
 	},
+	read: async (req, res) => {
+		const data = await Todo.findByPk(req.params.todoId);
+		res.render("todoRead", { data });
+	},
 };
