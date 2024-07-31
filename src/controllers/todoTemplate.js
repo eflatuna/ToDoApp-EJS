@@ -17,6 +17,7 @@ module.exports = {
 			res.render("todoCreate");
 		} else {
 			const data = await Todo.create(req.body);
+			res.redirect("/view"); //*yönlendirme icin kullanilan method. route adini yaziyoruz.
 		}
 	},
 };
